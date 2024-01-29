@@ -2,7 +2,7 @@ function updateForecast(response) {
   let forecastDay = document.querySelector("#weather-forecast");
   forecastDay.innerHTML = "";
 
-  for (let i = 1; i < 5; i++) {
+  for (let i = 1; i < 4; i++) {
     function formattedDayOfWeek(day) {
       let dayMultiplied = day * 1000;
       let date = new Date(dayMultiplied);
