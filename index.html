@@ -4,14 +4,40 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="src/style.css" />
  <title>City Weather Forecast</title>
 </head>
 
-<body>
+<body class="container">
+ <header class="centering">
+  <h1>London</h1>
+  <h2>UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</h2>
+  <div id="current-weather">
+   <span id="current-weather-icon"><img
+     src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" /></span>
+   <span id="current-temp">11<span id="current-temp-units">˚C</span>
+   </span>
+  </div>
+  <form id="city-search">
 
- <footer>
-  Coded by <a href="https://github.com/sophieosiecki"">Sophie Osiecki</a> | Open source on <a href="">GitHub</a> | Hosted by Netlify
+   <input type="text" id="city-input" placeholder="Enter a city...">
+   <input type="submit" id="city-submit">
+
+  </form>
+
+ </header>
+ <main>
+  <div id="weather-forecast">
+
+  </div>
+ </main>
+
+ <footer class="centering">
+  Coded by <a href="https://github.com/sophieosiecki"">Sophie Osiecki</a> | Open source on <a href="
+   https://github.com/sophieosiecki/my-forecast-weather-app">GitHub</a> | Hosted by <a
+   href="https://sophie-forecast-cityweather.netlify.app/">Netlify</a>
  </footer>
- 
+
 </body>
+
 </html>
