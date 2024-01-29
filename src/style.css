@@ -1,3 +1,11 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+footer {
+  position: relative;
+  bottom: -50px;
+}
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -6,6 +14,14 @@
 .centering {
   text-align: center;
   margin: 0 auto;
+}
+
+.day {
+  text-align: center;
+}
+
+.forecast-max {
+  font-weight: 700;
 }
 
 #current-weather {
@@ -20,12 +36,25 @@
 
 #current-temp {
   font-size: 35px;
-  post
 }
 
 #current-temp-units {
   font-size: 18px;
   position: relative;
-  top: -11px;
-  left: -3px;
+  top: -6px;
+  left: 0px;
+}
+
+#current-description {
+  position: relative;
+  top: -20px;
+  font-style: italic;
+}
+
+#weather-forecast {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  max-width: 600px;
 }

@@ -5,31 +5,41 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="src/style.css" />
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link
+  href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+  rel="stylesheet">
+ <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
  <title>City Weather Forecast</title>
 </head>
 
 <body class="container">
  <header class="centering">
-  <h1>London</h1>
-  <h2>UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND</h2>
-  <div id="current-weather">
-   <span id="current-weather-icon"><img
-     src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" /></span>
-   <span id="current-temp">11<span id="current-temp-units">˚C</span>
-   </span>
-  </div>
   <form id="city-search">
 
    <input type="text" id="city-input" placeholder="Enter a city...">
    <input type="submit" id="city-submit">
 
   </form>
+  <h1 id="city"></h1>
+  <h2 id="country"></h2>
+  <div id="current-weather">
+   <span id="current-weather-icon"></span>
+   <span id="current-temp"></span><span id="current-temp-units">˚C</span>
+   </span>
+  </div>
+  <span id="current-description"></span>
+
 
  </header>
  <main>
+
   <div id="weather-forecast">
+  </div>
 
   </div>
+
  </main>
 
  <footer class="centering">
@@ -39,5 +49,6 @@
  </footer>
 
 </body>
+<script src="src/app.js"></script>
 
 </html>
