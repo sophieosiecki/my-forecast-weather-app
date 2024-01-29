@@ -1,14 +1,22 @@
 body {
   font-family: "Lato", sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgba(68, 150, 236, 0.704) 0%,
+    rgb(14, 100, 239) 100%
+  );
 }
 
-footer {
-  position: relative;
-  bottom: -50px;
+h3 {
+  opacity: 0.7;
+  text-decoration: underline;
+  text-align: center;
 }
-.container {
-  max-width: 600px;
-  margin: 0 auto;
+
+input {
+  border-radius: 5px;
+  border: solid;
+  height: 30px;
 }
 
 .centering {
@@ -16,14 +24,55 @@ footer {
   margin: 0 auto;
 }
 
+.container-current,
+.container-forecast,
+.container-footer {
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(131, 123, 123, 0.2);
+  border: solid;
+}
+
+.container-current {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.container-forecast {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.container-footer {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
 .day {
   text-align: center;
 }
 
 .forecast-max {
   font-weight: 700;
+  opacity: 0.9;
 }
 
+.forecast-min {
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+#city-search {
+  margin-bottom: 15px;
+}
+
+#city-submit {
+  height: 37px;
+}
 #current-weather {
   position: relative;
   top: -20px;
@@ -47,7 +96,7 @@ footer {
 
 #current-description {
   position: relative;
-  top: -20px;
+  top: -10px;
   font-style: italic;
 }
 

@@ -1,8 +1,48 @@
 function updateForecast(response) {
   let forecastDay = document.querySelector("#weather-forecast");
   forecastDay.innerHTML = "";
-  for (let i = 0; i < 4; i++) {
+  console.log(response);
+
+  for (let i = 1; i < 5; i++) {
+    function formattedDayOfWeek(day) {
+      let dayMultiplied = day * 1000;
+      let date = new Date(dayMultiplied);
+      let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      let forecastDay = daysOfWeek[date.getDay()];
+      return forecastDay;
+    }
+    function formattedDate(day) {
+      let dayMultiplied = day * 1000;
+      let date = new Date(dayMultiplied);
+      let forecastDate = date.getDate();
+      return forecastDate;
+    }
+
+    function formattedMonth(day) {
+      let dayMultiplied = day * 1000;
+      let date = new Date(dayMultiplied);
+      let months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      let forecastMonth = months[date.getMonth()];
+
+      return forecastMonth;
+    }
     forecastDay.innerHTML += `<div class="day">
+    <h3>${formattedDayOfWeek(response.data.daily[i].time)}
+      ${formattedDate(response.data.daily[i].time)}
+      ${formattedMonth(response.data.daily[i].time)}</h3>
     <img src="${response.data.daily[i].condition.icon_url}" />
 
     <div class="forecast-max"><span class="forecast-max-temp">${Math.round(

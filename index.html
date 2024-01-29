@@ -14,39 +14,52 @@
  <title>City Weather Forecast</title>
 </head>
 
-<body class="container">
+<body>
+
  <header class="centering">
-  <form id="city-search">
 
-   <input type="text" id="city-input" placeholder="Enter a city...">
-   <input type="submit" id="city-submit">
 
-  </form>
-  <h1 id="city"></h1>
-  <h2 id="country"></h2>
-  <div id="current-weather">
-   <span id="current-weather-icon"></span>
-   <span id="current-temp"></span><span id="current-temp-units">˚C</span>
-   </span>
+
+  <div class="container-current">
+   <form id="city-search">
+    <input type="text" id="city-input" placeholder="Enter a city...">
+    <input type="submit" id="city-submit">
+
+   </form>
+   <h1 id="city"></h1>
+   <h2 id="country"></h2>
+   <div id="current-weather">
+    <span id="current-weather-icon"></span>
+    <span id="current-temp"></span><span id="current-temp-units">˚C</span>
+    </span>
+   </div>
+   <span id="current-description"></span>
+
   </div>
-  <span id="current-description"></span>
-
 
  </header>
- <main>
+ <div class="container-forecast">
+  <main class="centering">
 
-  <div id="weather-forecast">
-  </div>
 
-  </div>
 
- </main>
+   <div id="weather-forecast">
 
- <footer class="centering">
+
+   </div>
+
+
+  </main>
+
+ </div>
+
+
+ <footer class="container-footer">
   Coded by <a href="https://github.com/sophieosiecki"">Sophie Osiecki</a> | Open source on <a href="
    https://github.com/sophieosiecki/my-forecast-weather-app">GitHub</a> | Hosted by <a
    href="https://sophie-forecast-cityweather.netlify.app/">Netlify</a>
  </footer>
+
 
 </body>
 <script src="src/app.js"></script>
