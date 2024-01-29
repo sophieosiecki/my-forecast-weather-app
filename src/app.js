@@ -1,7 +1,6 @@
 function updateForecast(response) {
   let forecastDay = document.querySelector("#weather-forecast");
   forecastDay.innerHTML = "";
-  console.log(response);
 
   for (let i = 1; i < 5; i++) {
     function formattedDayOfWeek(day) {
@@ -87,6 +86,9 @@ function updateData(response) {
     let iconUrl = response.data.condition.icon_url;
     let iconElement = document.querySelector("#current-weather-icon");
     iconElement.innerHTML = `<img src ="${iconUrl}" />`;
+    let windElement = document.querySelector("#current-windspeed");
+    let wind = response.data.wind.speed;
+    windElement.innerHTML = wind;
   }
   displayCity(response);
   updateCurrentWeather(response);
